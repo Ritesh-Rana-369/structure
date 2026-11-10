@@ -1,0 +1,1464 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DSA Code Library | PGGC 11</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <a href="#" class="brand" onclick="showDefault(); return false;">
+
+            <div class="brand-mark">DS</div>
+
+            <div class="brand-text">
+                <strong>DSA</strong>
+                <span>Code Library</span>
+            </div>
+
+        </a>
+
+
+        <div class="search-wrap">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search programs...">
+
+            <button onclick="searchPrograms()">
+                Search
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="app-layout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <p class="sidebar-heading">
+                LEARNING MENU
+            </p>
+
+
+            <nav class="sidebar-nav">
+
+
+                <button class="nav-item active" onclick="showDefault(this)">
+                    All Programs
+                </button>
+
+
+
+                <!-- ARRAYS -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('arrayMenu')">
+
+                        Arrays <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="arrayMenu" class="submenu">
+
+                        <button onclick="showProgram('arrayTraversal')">
+                            Array Traversal
+                        </button>
+
+                        <button onclick="showProgram('deleteFirst')">
+                            Deletion at First
+                        </button>
+
+                        <button onclick="showProgram('deleteIndex')">
+                            Deletion at Index
+                        </button>
+
+                        <button onclick="showProgram('deleteLast')">
+                            Deletion at Last
+                        </button>
+
+                        <button onclick="showProgram('insertFirst')">
+                            Insertion at First
+                        </button>
+
+                        <button onclick="showProgram('insertIndex')">
+                            Insertion at Index
+                        </button>
+
+                        <button onclick="showProgram('insertLast')">
+                            Insertion at Last
+                        </button>
+
+                        <button onclick="showProgram('mergeArray')">
+                            Merge Array
+                        </button>
+
+                        <button onclick="showProgram('binarySearch')">
+                            Binary Search
+                        </button>
+
+                        <button onclick="showProgram('linearSearch')">
+                            Linear Search
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SORTING -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('sortingMenu')">
+
+                        Sorting <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="sortingMenu" class="submenu">
+
+                        <button onclick="showProgram('bubbleSort')">
+                            Bubble Sort
+                        </button>
+
+                        <button onclick="showProgram('insertionSort')">
+                            Insertion Sort
+                        </button>
+
+                        <button onclick="showProgram('mergeSort')">
+                            Merge Sort
+                        </button>
+
+                        <button onclick="showProgram('quickSort')">
+                            Quick Sort
+                        </button>
+
+                        <button onclick="showProgram('selectionSort')">
+                            Selection Sort
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECURSION -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('recursionMenu')">
+
+                        Recursion <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="recursionMenu" class="submenu">
+
+                        <button onclick="showProgram('factorialRecursion')">
+                            Factorial Recursion
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STACK -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('stackMenu')">
+
+                        Stack <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="stackMenu" class="submenu">
+
+                        <button onclick="showProgram('stackBottom')">
+                            Stack Bottom Operation
+                        </button>
+
+                        <button onclick="showProgram('stackLL')">
+                            Stack using Linked List
+                        </button>
+
+                        <button onclick="showProgram('stackArray')">
+                            Stack using Array
+                        </button>
+
+                        <button onclick="showProgram('infixPostfix')">
+                            Infix to Postfix
+                        </button>
+
+                        <button onclick="showProgram('stackPeek')">
+                            Stack Peek Operation
+                        </button>
+
+                        <button onclick="showProgram('stackPop')">
+                            Stack Pop Operation
+                        </button>
+
+                        <button onclick="showProgram('stackPush')">
+                            Stack Push Operation
+                        </button>
+
+                        <button onclick="showProgram('stackTop')">
+                            Stack Top Operation
+                        </button>
+
+                        <button onclick="showProgram('twoStacks')">
+                            Two Stacks in Single Array
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUEUE -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('queueMenu')">
+
+                        Queue <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="queueMenu" class="submenu">
+
+                        <button onclick="showProgram('circularQueue')">
+                            Circular Queue using Array
+                        </button>
+
+                        <button onclick="showProgram('deque')">
+                            Double Ended Queue using Array
+                        </button>
+
+                        <button onclick="showProgram('queueArray')">
+                            Queue using Array
+                        </button>
+
+                        <button onclick="showProgram('queueLL')">
+                            Queue using Linked List
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LINKED LIST -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('linkedListMenu')">
+
+                        Linked List <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="linkedListMenu" class="submenu">
+
+                        <button onclick="showProgram('circularLL')">
+                            Circular Linked List
+                        </button>
+
+                        <button onclick="showProgram('deleteLL')">
+                            Deletion Linked List
+                        </button>
+
+                        <button onclick="showProgram('doublyLL')">
+                            Doubly Linked List
+                        </button>
+
+                        <button onclick="showProgram('implementationLL')">
+                            Implementation Linked List
+                        </button>
+
+                        <button onclick="showProgram('linkedInsertion')">
+                            Linked List Insertion
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TREES -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('treeMenu')">
+
+                        Trees <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="treeMenu" class="submenu">
+
+                        <button onclick="showProgram('treeArray')">
+                            Tree using Array
+                        </button>
+
+                        <button onclick="showProgram('treeLL')">
+                            Tree using Linked List
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GRAPHS -->
+
+                <div class="menu-group">
+
+                    <button class="nav-item menu-main"
+                        onclick="toggleMenu('graphMenu')">
+
+                        Graphs <span>⌄</span>
+
+                    </button>
+
+
+                    <div id="graphMenu" class="submenu">
+
+                        <button onclick="showProgram('graphArray')">
+                            Graph using Array
+                        </button>
+
+                        <button onclick="showProgram('graphLL')">
+                            Graph using Linked List
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- WELCOME -->
+
+            <section class="welcome">
+
+
+                <div class="welcome-left">
+
+                    <h1>Explore DSA Programs</h1>
+
+                    <p>
+                        Basic and easy C programs for Data Structures and Algorithms.
+                    </p>
+
+
+                    <div class="hero-links">
+
+                        <button onclick="showTopic('Arrays')">
+                            View Arrays
+                        </button>
+
+                        <button onclick="showTopic('Sorting')">
+                            View Sorting
+                        </button>
+
+                        <button onclick="showTopic('Stack')">
+                            View Stack
+                        </button>
+
+                        <button onclick="showTopic('Queue')">
+                            View Queue
+                        </button>
+
+                        <button onclick="showTopic('Linked List')">
+                            View Linked List
+                        </button>
+
+                        <button onclick="showTopic('Trees')">
+                            View Trees
+                        </button>
+
+                        <button onclick="showTopic('Graphs')">
+                            View Graphs
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="welcome-code">
+
+                    <div class="code-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+<pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello PGGC 11");
+
+    return 0;
+}</pre>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PROGRAM SECTION -->
+
+            <section class="program-section">
+
+                <h2 id="sectionTitle">
+                    All DSA Programs
+                </h2>
+
+
+                <!-- DEFAULT MESSAGE -->
+
+                <div id="defaultProgram" class="default-program">
+
+                    <h3>DSA Code Library</h3>
+
+                    <p>
+                        Select a topic from the capsules or sidebar to view programs.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= ARRAYS ================= -->
+
+                <div id="arrayTraversal" class="program-card hidden" data-topic="Arrays">
+                    <h3>Array Traversal</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int i;
+
+    for(i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20 30 40 50</pre></div>
+                </div>
+
+
+                <div id="deleteFirst" class="program-card hidden" data-topic="Arrays">
+                    <h3>Deletion at First</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int i;
+
+    for(i = 0; i &lt; 4; i++)
+        a[i] = a[i + 1];
+
+    for(i = 0; i &lt; 4; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>20 30 40 50</pre></div>
+                </div>
+
+
+                <div id="deleteIndex" class="program-card hidden" data-topic="Arrays">
+                    <h3>Deletion at Index</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int i, index = 2;
+
+    for(i = index; i &lt; 4; i++)
+        a[i] = a[i + 1];
+
+    for(i = 0; i &lt; 4; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20 40 50</pre></div>
+                </div>
+
+
+                <div id="deleteLast" class="program-card hidden" data-topic="Arrays">
+                    <h3>Deletion at Last</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int i;
+
+    for(i = 0; i &lt; 4; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20 30 40</pre></div>
+                </div>
+
+
+                <div id="insertFirst" class="program-card hidden" data-topic="Arrays">
+                    <h3>Insertion at First</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[6] = {10, 20, 30, 40, 50};
+    int i;
+
+    for(i = 5; i &gt; 0; i--)
+        a[i] = a[i - 1];
+
+    a[0] = 5;
+
+    for(i = 0; i &lt; 6; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>5 10 20 30 40 50</pre></div>
+                </div>
+
+
+                <div id="insertIndex" class="program-card hidden" data-topic="Arrays">
+                    <h3>Insertion at Index</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[6] = {10, 20, 30, 40, 50};
+    int i, index = 2;
+
+    for(i = 5; i &gt; index; i--)
+        a[i] = a[i - 1];
+
+    a[index] = 25;
+
+    for(i = 0; i &lt; 6; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20 25 30 40 50</pre></div>
+                </div>
+
+
+                <div id="insertLast" class="program-card hidden" data-topic="Arrays">
+                    <h3>Insertion at Last</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[6] = {10, 20, 30, 40, 50, 60};
+    int i;
+
+    for(i = 0; i &lt; 6; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20 30 40 50 60</pre></div>
+                </div>
+
+
+                <div id="mergeArray" class="program-card hidden" data-topic="Arrays">
+                    <h3>Merge Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[3] = {10, 20, 30};
+    int b[3] = {40, 50, 60};
+    int c[6];
+    int i;
+
+    for(i = 0; i &lt; 3; i++)
+        c[i] = a[i];
+
+    for(i = 0; i &lt; 3; i++)
+        c[i + 3] = b[i];
+
+    for(i = 0; i &lt; 6; i++)
+        printf("%d ", c[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20 30 40 50 60</pre></div>
+                </div>
+
+
+                <div id="binarySearch" class="program-card hidden" data-topic="Arrays">
+                    <h3>Binary Search</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int low = 0, high = 4;
+    int key = 30;
+
+    while(low &lt;= high)
+    {
+        int mid = (low + high) / 2;
+
+        if(a[mid] == key)
+        {
+            printf("Found");
+            break;
+        }
+        else if(a[mid] &lt; key)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>Found</pre></div>
+                </div>
+
+
+                <div id="linearSearch" class="program-card hidden" data-topic="Arrays">
+                    <h3>Linear Search</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {10, 20, 30, 40, 50};
+    int key = 30, i;
+
+    for(i = 0; i &lt; 5; i++)
+    {
+        if(a[i] == key)
+        {
+            printf("Found");
+            break;
+        }
+    }
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>Found</pre></div>
+                </div>
+
+
+
+                <!-- ================= SORTING ================= -->
+
+                <div id="bubbleSort" class="program-card hidden" data-topic="Sorting">
+                    <h3>Bubble Sort</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {5, 3, 1, 4, 2};
+    int i, j, temp;
+
+    for(i = 0; i &lt; 5; i++)
+        for(j = 0; j &lt; 4; j++)
+            if(a[j] &gt; a[j + 1])
+            {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+
+    for(i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>1 2 3 4 5</pre></div>
+                </div>
+
+
+                <div id="insertionSort" class="program-card hidden" data-topic="Sorting">
+                    <h3>Insertion Sort</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {5, 3, 1, 4, 2};
+    int i, j, key;
+
+    for(i = 1; i &lt; 5; i++)
+    {
+        key = a[i];
+        j = i - 1;
+
+        while(j &gt;= 0 && a[j] &gt; key)
+        {
+            a[j + 1] = a[j];
+            j--;
+        }
+
+        a[j + 1] = key;
+    }
+
+    for(i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>1 2 3 4 5</pre></div>
+                </div>
+
+
+                <div id="mergeSort" class="program-card hidden" data-topic="Sorting">
+                    <h3>Merge Sort</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+void merge(int a[], int l, int m, int r)
+{
+    int temp[10];
+    int i = l, j = m + 1, k = 0;
+
+    while(i &lt;= m && j &lt;= r)
+    {
+        if(a[i] &lt; a[j])
+            temp[k++] = a[i++];
+        else
+            temp[k++] = a[j++];
+    }
+
+    while(i &lt;= m)
+        temp[k++] = a[i++];
+
+    while(j &lt;= r)
+        temp[k++] = a[j++];
+
+    for(i = l, k = 0; i &lt;= r; i++, k++)
+        a[i] = temp[k];
+}
+
+void sort(int a[], int l, int r)
+{
+    int m;
+
+    if(l &lt; r)
+    {
+        m = (l + r) / 2;
+
+        sort(a, l, m);
+        sort(a, m + 1, r);
+
+        merge(a, l, m, r);
+    }
+}
+
+int main()
+{
+    int a[5] = {5, 3, 1, 4, 2};
+    int i;
+
+    sort(a, 0, 4);
+
+    for(i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>1 2 3 4 5</pre></div>
+                </div>
+
+
+                <div id="quickSort" class="program-card hidden" data-topic="Sorting">
+                    <h3>Quick Sort</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+void quickSort(int a[], int low, int high)
+{
+    int i = low;
+    int j = high;
+    int pivot = a[(low + high) / 2];
+    int temp;
+
+    while(i &lt;= j)
+    {
+        while(a[i] &lt; pivot)
+            i++;
+
+        while(a[j] &gt; pivot)
+            j--;
+
+        if(i &lt;= j)
+        {
+            temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+
+            i++;
+            j--;
+        }
+    }
+
+    if(low &lt; j)
+        quickSort(a, low, j);
+
+    if(i &lt; high)
+        quickSort(a, i, high);
+}
+
+int main()
+{
+    int a[5] = {5, 3, 1, 4, 2};
+    int i;
+
+    quickSort(a, 0, 4);
+
+    for(i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>1 2 3 4 5</pre></div>
+                </div>
+
+
+                <div id="selectionSort" class="program-card hidden" data-topic="Sorting">
+                    <h3>Selection Sort</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[5] = {5, 3, 1, 4, 2};
+    int i, j, min, temp;
+
+    for(i = 0; i &lt; 4; i++)
+    {
+        min = i;
+
+        for(j = i + 1; j &lt; 5; j++)
+        {
+            if(a[j] &lt; a[min])
+                min = j;
+        }
+
+        temp = a[i];
+        a[i] = a[min];
+        a[min] = temp;
+    }
+
+    for(i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>1 2 3 4 5</pre></div>
+                </div>
+
+
+
+                <!-- ================= RECURSION ================= -->
+
+                <div id="factorialRecursion" class="program-card hidden" data-topic="Recursion">
+                    <h3>Factorial using Recursion</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int factorial(int n)
+{
+    if(n == 0)
+        return 1;
+
+    return n * factorial(n - 1);
+}
+
+int main()
+{
+    printf("%d", factorial(5));
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>120</pre></div>
+                </div>
+
+
+
+                <!-- ================= STACK ================= -->
+
+                <div id="stackBottom" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Bottom Operation</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int stack[3] = {10, 20, 30};
+
+    printf("Bottom = %d", stack[0]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>Bottom = 10</pre></div>
+                </div>
+
+
+                <div id="stackLL" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Implementation using Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node first, second;
+
+    first.data = 10;
+    second.data = 20;
+
+    second.next = &first;
+
+    printf("%d", second.data);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>20</pre></div>
+                </div>
+
+
+                <div id="stackArray" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Implementation using Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int stack[5];
+    int top = -1;
+
+    stack[++top] = 10;
+    stack[++top] = 20;
+
+    printf("%d", stack[top]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>20</pre></div>
+                </div>
+
+
+                <div id="infixPostfix" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Infix to Postfix</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    char postfix[] = "AB+C*";
+
+    printf("%s", postfix);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>AB+C*</pre></div>
+                </div>
+
+
+                <div id="stackPeek" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Peek Operation</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int stack[3] = {10, 20, 30};
+    int top = 2;
+
+    printf("%d", stack[top]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>30</pre></div>
+                </div>
+
+
+                <div id="stackPop" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Pop Operation</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int stack[3] = {10, 20, 30};
+    int top = 2;
+
+    printf("%d", stack[top]);
+
+    top--;
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>30</pre></div>
+                </div>
+
+
+                <div id="stackPush" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Push Operation</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int stack[5];
+    int top = -1;
+
+    stack[++top] = 10;
+    stack[++top] = 20;
+
+    printf("%d", stack[top]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>20</pre></div>
+                </div>
+
+
+                <div id="stackTop" class="program-card hidden" data-topic="Stack">
+                    <h3>Stack Top Operation</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int stack[3] = {10, 20, 30};
+    int top = 2;
+
+    printf("Top = %d", stack[top]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>Top = 30</pre></div>
+                </div>
+
+
+                <div id="twoStacks" class="program-card hidden" data-topic="Stack">
+                    <h3>Two Stacks in Single Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a[10];
+
+    int top1 = -1;
+    int top2 = 10;
+
+    a[++top1] = 10;
+    a[--top2] = 20;
+
+    printf("%d %d", a[top1], a[top2]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+
+                <!-- ================= QUEUE ================= -->
+
+                <div id="circularQueue" class="program-card hidden" data-topic="Queue">
+                    <h3>Circular Queue using Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int queue[5];
+    int rear = 0;
+
+    queue[rear] = 10;
+    rear = (rear + 1) % 5;
+
+    queue[rear] = 20;
+
+    printf("10 20");
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+                <div id="deque" class="program-card hidden" data-topic="Queue">
+                    <h3>Double Ended Queue using Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int deque[5];
+
+    deque[0] = 10;
+    deque[1] = 20;
+
+    printf("%d %d", deque[0], deque[1]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+                <div id="queueArray" class="program-card hidden" data-topic="Queue">
+                    <h3>Queue Implementation using Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int queue[5];
+    int rear = 0;
+
+    queue[rear++] = 10;
+    queue[rear++] = 20;
+
+    printf("%d %d", queue[0], queue[1]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+                <div id="queueLL" class="program-card hidden" data-topic="Queue">
+                    <h3>Queue Implementation using Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node first, second;
+
+    first.data = 10;
+    second.data = 20;
+
+    first.next = &second;
+    second.next = NULL;
+
+    printf("%d %d", first.data, second.data);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+
+                <!-- ================= LINKED LIST ================= -->
+
+                <div id="circularLL" class="program-card hidden" data-topic="Linked List">
+                    <h3>Circular Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node a, b;
+
+    a.data = 10;
+    b.data = 20;
+
+    a.next = &b;
+    b.next = &a;
+
+    printf("%d %d", a.data, b.data);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+                <div id="deleteLL" class="program-card hidden" data-topic="Linked List">
+                    <h3>Deletion in Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int list[3] = {10, 20, 30};
+    int i;
+
+    for(i = 1; i &lt; 2; i++)
+        list[i] = list[i + 1];
+
+    printf("%d %d", list[0], list[1]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 30</pre></div>
+                </div>
+
+
+                <div id="doublyLL" class="program-card hidden" data-topic="Linked List">
+                    <h3>Doubly Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int data;
+    struct Node *prev;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node a, b;
+
+    a.data = 10;
+    b.data = 20;
+
+    a.next = &b;
+    b.prev = &a;
+
+    printf("%d %d", a.data, b.data);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+                <div id="implementationLL" class="program-card hidden" data-topic="Linked List">
+                    <h3>Implementation of Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node a, b;
+
+    a.data = 10;
+    b.data = 20;
+
+    a.next = &b;
+    b.next = NULL;
+
+    printf("%d %d", a.data, b.data);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+                <div id="linkedInsertion" class="program-card hidden" data-topic="Linked List">
+                    <h3>Linked List Insertion</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int data;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node a, b;
+
+    a.data = 10;
+    b.data = 20;
+
+    a.next = &b;
+
+    printf("%d %d", a.data, b.data);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20</pre></div>
+                </div>
+
+
+
+                <!-- ================= TREES ================= -->
+
+                <div id="treeArray" class="program-card hidden" data-topic="Trees">
+                    <h3>Tree Implementation using Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int tree[7];
+
+    tree[0] = 10;
+    tree[1] = 20;
+    tree[2] = 30;
+
+    printf("%d %d %d",
+           tree[0],
+           tree[1],
+           tree[2]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10 20 30</pre></div>
+                </div>
+
+
+                <div id="treeLL" class="program-card hidden" data-topic="Trees">
+                    <h3>Tree Implementation using Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int data;
+    struct Node *left;
+    struct Node *right;
+};
+
+int main()
+{
+    struct Node root;
+
+    root.data = 10;
+    root.left = NULL;
+    root.right = NULL;
+
+    printf("%d", root.data);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>10</pre></div>
+                </div>
+
+
+
+                <!-- ================= GRAPHS ================= -->
+
+                <div id="graphArray" class="program-card hidden" data-topic="Graphs">
+                    <h3>Graph using Array</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+int main()
+{
+    int graph[3][3] =
+    {
+        {0, 1, 1},
+        {1, 0, 1},
+        {1, 1, 0}
+    };
+
+    printf("%d", graph[0][1]);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>1</pre></div>
+                </div>
+
+
+                <div id="graphLL" class="program-card hidden" data-topic="Graphs">
+                    <h3>Graph using Linked List</h3>
+                    <pre>#include &lt;stdio.h&gt;
+
+struct Node
+{
+    int vertex;
+    struct Node *next;
+};
+
+int main()
+{
+    struct Node a, b;
+
+    a.vertex = 1;
+    b.vertex = 2;
+
+    a.next = &b;
+    b.next = NULL;
+
+    printf("%d %d", a.vertex, b.vertex);
+
+    return 0;
+}</pre>
+                    <div class="output"><b>OUTPUT</b><pre>1 2</pre></div>
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
